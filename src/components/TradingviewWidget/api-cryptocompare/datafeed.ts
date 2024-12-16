@@ -68,12 +68,10 @@ async function getAllSymbols() {
         exchange: exchange.value,
         exchange_logo: 'https://s3-symbol-logo.tradingview.com/provider/bybit.svg',
         type,
-        ...(import.meta.env.PROD && {
-          logo_urls: [
+        logo_urls: [
             `https://s3-symbol-logo.tradingview.com/crypto/XTVC${INDEX_UNDERLYING}.svg`,
             `https://s3-symbol-logo.tradingview.com/crypto/XTVC${QUOTE_CURRENCY}.svg`,
           ],
-        }),
       };
     });
 
